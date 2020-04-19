@@ -2,6 +2,10 @@
 
 This is code intended to reproduce the figures and experiments for the paper: Probabilistic Safety for Bayesian Neural Networks
 
+
+![alt text](https://raw.githubusercontent.com/matthewwicker/ProbabilisticSafetyforBNNs/master/SimpleSafetyExample/Example.png)
+
+
 NB: Some files are lablled 'ProbablisticReachability' these compute probablistic safety and will soon be refactored.
 
 ### Repository Organization:
