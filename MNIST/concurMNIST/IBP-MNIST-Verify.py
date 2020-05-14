@@ -13,7 +13,7 @@ iters = int(args.samples)
 width = int(args.width)
 margin = float(args.margin)
 
-
+import pickle
 
 nproc = 25
 import math

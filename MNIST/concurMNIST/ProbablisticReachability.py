@@ -199,8 +199,13 @@ def interval_bound_propagation_VCAS(a):
             assert((y_pred_l <= y).all())
             assert((y_pred_u >= y).all())
             # Check if interval propagation still respects out_reg constraint
-            extra_gate = (reverse and np.argmax(y_pred_l) != out_ind and np.argmax(y_pred_u) != out_ind)
-	    if((np.argmax(y_pred_l) == out_ind and np.argmax(y_pred_u) == out_ind) or extra_gate):
+            #extra_gate = (reverse and np.argmax(y_pred_l) != out_ind and np.argmax(y_pred_u) != out_ind)
+            safety_check = True; value_ind = 0
+            for value in y_pred_u:
+                if(y_pred_l[out_ind] < value and value_ind != out_ind):
+                    safety_check = False
+                value_ind += 1
+	    if(safety_check):
                 # If it does, add the weight to the set of valid weights
                 valid_weight_intervals.append([sW_0[i], sb_0[i], sW_1[i], sb_1[i]])
         else:
