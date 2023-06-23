@@ -1,5 +1,8 @@
 # Probabilistic Safety for BNNs
 
+### For the journal extension code (with significant experimental updates) see the following repository:
+### https://github.com/matthewwicker/AdversarialRobustnessCertificationForBNNs/tree/main
+
 This is code intended to reproduce the figures and experiments for the paper: Probabilistic Safety for Bayesian Neural Networks
 
 
